@@ -1,0 +1,36 @@
+﻿body {
+     width: 800px;
+ 
+    margin-top: 0px;
+    padding: 0px;
+   
+}
+.backGround {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    background-color: #FFFFFF;
+   
+}
+
+/*
+* === sets limit for content ===
+*/
+.foreGround{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding: 0px;
+
+}
+.avatar {
+    width: 200px;
+    height:auto; 
+}
+.login{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
