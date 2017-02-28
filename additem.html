@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Add Item</title>
+
+</head>
+
+<body>
+<div id="mainContent">
+	<form autocomplete ="on">
+		<h1>Enter Item</h1>
+		<p>
+			<label for="ai_name">Item Name</label><br/>
+			<input id="ai_name" name="ai_name" required="required" type="text"></input>
+		</p>
+		<p>
+		    <input id="upload" type="file"/>
+            <a href="" id="upload_link">Upload a photo.</a>
+        </p>
+		<p>
+			<label for="ai_description">Description</label><br/>
+			<textarea rows="5" cols="50"> </textarea>
+		</p>
+		<p>
+			<label for="ai_color">Color</label><br/>
+			 <select>
+               <option value="black">Black</option>
+               <option value="red">Red</option>
+               <option value="navy">Navy</option>
+               <option value="clear">Clear</option>
+               <option value="white">White</option>
+             </select> 
+		</p>
+		<p>
+			<label for="ai_type">Type</label><br/>
+			 <select>
+               <option value="shirt">Shirt</option>
+               <option value="pants">Pants</option>
+               <option value="shoes">Shoes</option>
+               <option value="jacket">Jacket</option>
+               <option value="hat">Hat</option>
+             </select>
+		</p>
+		<p>
+			<label for="ai_size">Size</label><br/>
+			 <select>
+               <option value="size">Shmedium</option>
+               <option value="size">10XL</option>
+              
+             </select>
+		</p>
+	</form>
+<button id="clickButton" class="buttonStyle">Submit Item</button>
+</div>
+
+</body>
+</html>
