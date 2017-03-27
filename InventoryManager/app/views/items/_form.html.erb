@@ -10,6 +10,27 @@
       </ul>
     </div>
   <% end %>
+  
+  <%= f.label :name %><br />
+  <div class="field"><%= f.text_field(:name) %> <br /></div>
+  
+  <%= f.label :description %><br />
+  <div class="field"><%= f.text_area(:description, size: "40x5") %> <br /></div>
+  
+  <%= f.label :quality %><br />
+  <div class="field"><%= f.select(:quality, Item.qualities.keys.to_a) %> <br /></div>
+  
+  <%= f.label :quality_desc %> <br />
+  <div class="field"><%= f.text_area(:quality_desc) %> <br /></div>
+  
+  <%= f.label :price %><br />
+  <div class="field"><%= f.number_field(:price) %> <br /></div>
+  
+  <%= f.label :location %><br />
+  <div class="field"><%= f.text_field(:location) %> <br /></div>
+  
+  <%= f.label :category %><br />
+  <div class="field"><%= f.select(:category, Item.categories.keys.to_a) %> <br /></div>
 
   <div class="actions">
     <%= f.submit %>
