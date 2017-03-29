@@ -2,13 +2,16 @@
 
 <% item = Item.find(params[:id]) %>
 
-<h2><%= item.name %></h2>
+<h1>Items</h1>
+<h2><%= item.name %>, <%=item.category %></h2>
+
 <br/>
-Price: <%= item.price %>
+Price: $<%= item.price %>
 <br/>
 Description: <%= item.description %>
 <br/>
-Quality: <%= item.quality %>
+Quality: <%= item.quality %>, 
+         <%= item.quality_desc %>
 <br/>
 Location: <%= item.location %>
 <br/>
