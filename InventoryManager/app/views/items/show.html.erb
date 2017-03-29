@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<% item = Item.find(params[:id]) %>
+
+<h2><%= item.name %></h2>
+<br/>
+Price: <%= item.price %>
+<br/>
+Description: <%= item.description %>
+<br/>
+Quality: <%= item.quality %>
+<br/>
+Location: <%= item.location %>
+<br/>
+
+<br/>
+<br/>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
