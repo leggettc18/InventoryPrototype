@@ -32,7 +32,7 @@
   <%= f.label :category %><br />
   <div class="field"><%= f.select(:category, Item.categories.keys.to_a) %> <br /></div>
   
-  <%=f.label :images %><br />
+  <%=f.label :images %> <i>*If on a Computer, Use Ctrl/Shift + Click to select multiple pictures.</i><br />
   <div class="field"><%= f.file_field(:images, :multiple => true) %></div>
 
   <div class="actions">
