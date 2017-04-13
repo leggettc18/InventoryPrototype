@@ -1,0 +1,21 @@
+%p#notice= notice
+- item = Item.find(params[:id])
+%h1 Items
+%h2
+  = item.name
+  , #{item.category}
+%br/
+Price: $#{item.price}
+%br/
+Description: #{item.description}
+%br/
+Quality: #{item.quality},
+\#{item.quality_desc}
+%br/
+Location: #{item.location}
+%br/
+%br/
+%br/
+= link_to 'Edit', edit_item_path(@item)
+|
+= link_to 'Back', items_path

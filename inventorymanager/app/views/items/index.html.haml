@@ -1,0 +1,29 @@
+%p#notice= notice
+%h1 Items
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Quality
+      %th Price
+      %th Location
+      %th Options
+  %tbody
+    - @items.each do |item|
+      %tr
+        %td= item.name
+        %td= item.description
+        %td
+          = item.quality
+          %br/
+          %br/
+          = item.quality_desc
+        %td= item.price
+        %td= item.location
+        %td{:colspan => "3"}
+          = link_to 'Show', item 
+          = link_to 'Edit', edit_item_path(item)
+          = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Item', new_item_path

@@ -1,0 +1,46 @@
+= form_for(item) do |f|
+  - if item.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(item.errors.count, "error")
+        prohibited this item from being saved:
+      %ul
+        - item.errors.full_messages.each do |message|
+          %li= message
+  = f.label :name
+  %br/
+  .field
+    = f.text_field(:name)
+    %br/
+  = f.label :description
+  %br/
+  .field
+    = f.text_area(:description, size: "40x5")
+    %br/
+  = f.label :quality
+  %br/
+  .field
+    = f.select(:quality, Item.qualities.keys.to_a)
+    %br/
+  = f.label :quality_desc
+  %br/
+  .field
+    = f.text_area(:quality_desc)
+    %br/
+  = f.label :price
+  %br/
+  .field
+    = f.number_field(:price)
+    %br/
+  = f.label :location
+  %br/
+  .field
+    = f.text_field(:location)
+    %br/
+  = f.label :category
+  %br/
+  .field
+    = f.select(:category, Item.categories.keys.to_a)
+    %br/
+  .actions
+    = f.submit
