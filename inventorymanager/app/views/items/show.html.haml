@@ -5,6 +5,9 @@
   = item.name
   , #{item.category}
 %br/
+- item.images.each do |image|
+  = image_tag(image.small.url)
+%br
 Price: $#{item.price}
 %br/
 Description: #{item.description}
