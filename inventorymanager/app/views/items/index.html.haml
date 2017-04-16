@@ -1,5 +1,6 @@
 %p#notice= notice
-%h1 Items
+%h2 Current Inventory
+= link_to 'New Item', new_item_path
 %table
   %thead
     %tr
@@ -26,4 +27,4 @@
           = link_to 'Edit', edit_item_path(item)
           = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Item', new_item_path
+

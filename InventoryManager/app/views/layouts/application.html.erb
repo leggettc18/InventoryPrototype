@@ -3,7 +3,13 @@
   <head>
     <title>InventoryManager</title>
     <%= csrf_meta_tags %>
-
+    <nav_ul>
+      <!-- <a href="" class="logo" style="float:left">OOO</a> -->
+      <a href="" class="nounderline">INVENTORY</a> 
+      <a href="" class="nounderline">ABOUT</a> 
+      <a href="" class="nounderline">CONTACT</a>
+    </nav_ul>
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -11,4 +17,10 @@
   <body>
     <%= yield %>
   </body>
+  <footer>
+    <p>
+      Posted by: Christen Mills, Christopher Leggett, Aaron Harris<br/>
+      Contact Information: ~
+    </p>
+  </footer>
 </html>
