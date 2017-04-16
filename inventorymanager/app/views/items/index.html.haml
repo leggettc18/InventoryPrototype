@@ -22,7 +22,7 @@
         %td= item.price
         %td= item.location
         %td{:colspan => "3"}
-          = link_to 'Show', item 
+          = link_to 'Show', item, class: "item-show" 
           = link_to 'Edit', edit_item_path(item)
           = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
 %br/

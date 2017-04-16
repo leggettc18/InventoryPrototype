@@ -1,0 +1,21 @@
+%h1 Items
+%h2
+  = item.name
+  , #{item.category}
+%br/
+- item.images.each do |image|
+  = image_tag(image.small.url)
+%br
+Price: $#{item.price}
+%br/
+Description: #{item.description}
+%br/
+Quality: #{item.quality},
+\#{item.quality_desc}
+%br/
+Location: #{item.location}
+%br/
+%br/
+%br/
+= link_to 'Edit', edit_item_path(@item)
+= link_to 'Close', '', id: 'closeLink'

@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    render(:partial => 'item', :object => @item) if request.xhr?
   end
 
   # GET /items/new
