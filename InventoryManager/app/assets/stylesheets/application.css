@@ -12,4 +12,48 @@
  *
  *= require_tree .
  *= require_self
+ *
+ * Feather: #77C9D4
+ * Marine: #57BC90
+ * Forest: #015249
+ * Sleek Gray: #A5A5AF
  */
+.logo {
+    float:left;
+} 
+
+.logo:hover {
+    background-color: transparent;
+}
+
+.nounderline {
+    text-decoration: none;
+}
+
+body {
+    
+} 
+
+nav_ul {
+    width: 100%;
+    display: block;
+    font-size: large;
+    text-align: right;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    overflow: hidden;
+    color: #77C9D4;
+    background-color: white;
+}
+
+nav_ul a {
+    margin: 30px;
+}
+
+nav_ul a:hover {
+    color: white;
+    background-color: #77C9D4;
+}
+ 
+
