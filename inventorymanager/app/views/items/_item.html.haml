@@ -1,5 +1,4 @@
-%p#notice= notice
-- item = Item.find(params[:id])
+%h1 Items
 %h2
   = item.name
   , #{item.category}
@@ -19,5 +18,4 @@ Location: #{item.location}
 %br/
 %br/
 = link_to 'Edit', edit_item_path(@item)
-|
-= link_to 'Back', items_path
+= link_to 'Close', '', id: 'closeLink'

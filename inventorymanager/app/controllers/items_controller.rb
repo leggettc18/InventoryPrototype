@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    render(:partial => 'item', :object => @item) if request.xhr?
   end
 
   # GET /items/new
@@ -69,6 +70,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.fetch(:item, {}).permit(:name, :description, :quality, :quality_desc, :price, :location, :category)
+      params.fetch(:item, {}).permit(:name, :description, :quality, :quality_desc, :price, :location, :category, { images: [] })
     end
 end

@@ -42,5 +42,9 @@
   .field
     = f.select(:category, Item.categories.keys.to_a)
     %br/
+  .field
+    = f.file_field(:images, multiple: true)
+    = f.hidden_field(:images_cache)
+    %br/
   .actions
     = f.submit
