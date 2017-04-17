@@ -18,7 +18,7 @@ var ItemPopup = {
     showItemInfo: function(data, requestStatus, xhrObject) {
         //center a floater 1/2 as wide and 1/4 as tall as screen
         var oneFourth = Math.ceil($(window).width() / 4);
-        $('#itemInfo').css({'left': oneFourth, 'width': 2*oneFourth, 'top': 250}).html(data).show();
+        $('#itemInfo').css({'left': oneFourth, 'width': 2*oneFourth, 'top': 0.5*oneFourth}).html(data).show();
         //make the Close link in the hidden element work
         $('#closeLink').click(ItemPopup.hideItemInfo);
         return(false); //prevent default link action
