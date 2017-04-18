@@ -1,6 +1,6 @@
-%p#notice= notice
-
+Search:&nbsp
 %input#ksInput{:onkeyup => "keywordSearch()", :placeholder => "Search for items...", :type => "text"}/
+&nbsp&nbsp
 
 Quality: &nbsp
 %select#qualityInput{:onchange => "qualityFilter()"} 
@@ -19,6 +19,7 @@ Categories: &nbsp
   %option{:value => "Appliances"} Appliances
   %option{:value => "Clothes"} Clothes
   %option{:value => "Other"} Other
+&nbsp&nbsp
 
 Price Sort: &nbsp  
 %button#descending{:onclick => "priceSort(this.id)"} High -> Low
@@ -29,6 +30,7 @@ Price Sort: &nbsp
 %br/
 
 %h2 Current Inventory
+%p#notice= notice
 = link_to 'New Item', new_item_path
 %table#myTable
   %thead

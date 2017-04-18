@@ -1,3 +1,10 @@
+function tableOptions()
+{
+  var options = document.getElementById("optDiv1")
+  
+  options.style.display = "hidden"
+}
+
 /*global $*/
 function keywordSearch() {
   // Declare variables 
