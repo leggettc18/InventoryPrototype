@@ -6,6 +6,9 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    
+    @qualities = Item.qualities.keys.to_a
+    @categories = Item.categories.keys.to_a
   end
 
   # GET /items/1

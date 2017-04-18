@@ -15,3 +15,4 @@ Employee.create!([
     {email: "test2@gmail.com", password: "password", username: "Mills" },
     {email: "test3@gmail.com", password: "password", username: "Leggit" }
     ])
+

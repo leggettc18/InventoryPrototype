@@ -28,8 +28,10 @@
                 %span.sr-only (current)
           %ul.nav.navbar-nav.navbar-right
             - if admin_signed_in?
+              %li= link_to current_admin.username, edit_admin_registration_path
               %li= link_to "Logout", destroy_admin_session_path, :method => :delete
             - elsif employee_signed_in?
+              %li= link_to current_employee.username, edit_employee_registration_path
               %li= link_to "Logout", destroy_employee_session_path, :method => :delete
             - else
               %li

@@ -1,13 +1,43 @@
 %p#notice= notice
+
+%input#ksInput{:onkeyup => "keywordSearch()", :placeholder => "Search for items...", :type => "text"}/
+
+Quality: &nbsp
+%select#qualityFilter 
+  %option{:value => "All"} All
+  %option{:value => "New"} New
+  %option{:value => "Like New"} Like New
+  %option{:value => "Very Good"} Very Good
+  %option{:value => "Acceptable"} Acceptable
+  %option{:value => "Poor"} Poor
+
+Categories: &nbsp
+%select#categoryInput{:onchange => "categoryFilter()"}
+  %option{:value => "All"} All
+  %option{:value => "Furniture"} Furniture
+  %option{:value => "Electronics"} Electronics
+  %option{:value => "Appliances"} Appliances
+  %option{:value => "Clothes"} Clothes
+  %option{:value => "Other"} Other
+
+Price Sort: &nbsp  
+%button{:onclick => "priceSort()"} High -> Low
+
+&nbsp
+
+%button#descending{:onclick => "priceSort(this.id)"} Low -> High
+%br/
+
 %h2 Current Inventory
 = link_to 'New Item', new_item_path
-%table
+%table#myTable
   %thead
     %tr
       %th Name
       %th Description
       %th Quality
       %th Price
+      %th Category
       %th Location
       %th Options
   %tbody
@@ -21,6 +51,7 @@
           %br/
           = item.quality_desc
         %td= item.price
+        %td= item.category
         %td= item.location
         %td{:colspan => "3"}
           = link_to 'More Information', item, class: "item-show"
