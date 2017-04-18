@@ -93,15 +93,15 @@ function priceSort(clicked_id) {
       ynum = parseFloat(y.innerHTML);
       
       //check if the two rows should switch place:
-      if(clicked_id == "descending"){
-        if (xnum < ynum) {
+      if(clicked_id == "ascending"){
+        if (xnum > ynum) {
           //if so, mark as a switch and break the loop:
           shouldSwitch= true;
           break;
         }
       }
-      else {
-        if (xnum > ynum) {
+      if(clicked_id == "descending") {
+        if (xnum < ynum) {
           //if so, mark as a switch and break the loop:
           shouldSwitch= true;
           break;

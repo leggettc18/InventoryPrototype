@@ -3,7 +3,7 @@
 %input#ksInput{:onkeyup => "keywordSearch()", :placeholder => "Search for items...", :type => "text"}/
 
 Quality: &nbsp
-%select#qualityFilter 
+%select#qualityInput{:onchange => "qualityFilter()"} 
   %option{:value => "All"} All
   %option{:value => "New"} New
   %option{:value => "Like New"} Like New
@@ -21,11 +21,11 @@ Categories: &nbsp
   %option{:value => "Other"} Other
 
 Price Sort: &nbsp  
-%button{:onclick => "priceSort()"} High -> Low
+%button#descending{:onclick => "priceSort(this.id)"} High -> Low
 
 &nbsp
 
-%button#descending{:onclick => "priceSort(this.id)"} Low -> High
+%button#ascending{:onclick => "priceSort(this.id)"} Low -> High
 %br/
 
 %h2 Current Inventory
